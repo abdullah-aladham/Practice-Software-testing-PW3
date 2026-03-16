@@ -1,0 +1,11 @@
+name: Manual Test Cases Validation WorkFlow
+
+path:
+    manual_testcases/**/**.yml
+on: 
+    push:
+     branche: master
+    pull_request:
+     branch:  master
+jobs:
+    
