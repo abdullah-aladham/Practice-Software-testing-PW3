@@ -24,7 +24,10 @@ jobs:
           with:
           node-version: lts/*
         - name: Prettier Code Check
-           run: npx prettier --check .
+           run: yarn prettier . --write
+      - uses: autofix-ci/action@v1
+        with:
+          commit-message: "Apply Prettier format"
         - name:  Run SonarCloud Scan
            uses:  SonarSource/sonarcloud-github-action@master
         - name: Run Snyk
