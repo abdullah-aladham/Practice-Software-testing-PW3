@@ -2,5 +2,47 @@
 feature: Login
 
 
-secenarios:
-    -title: 
+    secenarios:
+        - title: Successful Login with Email and password
+        - given: the User is on the login page
+        - and: the user enters valid Email
+        - and: the user enters valid password
+        - when: the user clicks on login button
+        - then: the login is successful 
+                user should be redirected to my account page
+
+    
+        - title: Failed Login with invalid Email and valid Password
+        - given: the user is on the login page
+        - and: the user enters invalid Username
+        - and: the user enters valid password
+        - when: the user clicks on login button
+        - then: an Error box should appear which contains "Invalid email or password"
+
+
+        - title: Failed Login with valid Email and invalid Password
+        - given: the user is on the login page
+        - and: the user enters valid Username
+        - and: the user enters invalid password
+        - when: the user clicks on login button
+        - then: an Error box should appear which contains "Invalid email or password"
+
+
+
+        - title: Failed Login with invalid Email and invalid Password
+        - given: the user is on the login page
+        - and: the user enters invalid Username
+        - and: the user enters invalid password
+        - when: the user clicks on login button
+        - then: an Error box should appear which contains "Invalid email or password"
+
+        - title: Failed Login with blank fields
+        - given: the user is on the login page
+        - and: the user enters invalid Username
+        - and: the user enters invalid password
+        - when: the user clicks on login button
+        - then: Error boxes should appear which contain "Email is required" for email input
+                and "Password is required" for password.
+
+
+---
