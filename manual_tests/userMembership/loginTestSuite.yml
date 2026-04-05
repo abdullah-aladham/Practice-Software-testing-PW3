@@ -1,8 +1,8 @@
 ---
+
 feature: Login
 
-
-    secenarios:
+scenarios:
         - title: Successful Login with Email and password
         - given: the User is on the login page
         - and: the user enters valid Email
