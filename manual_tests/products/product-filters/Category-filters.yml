@@ -1,0 +1,45 @@
+---
+
+Feature: Product Category Filters'
+
+Scenarios:
+    - title: Filter products by category "Hand Tools"
+    - given: User is on Homepage (Products Grid)
+    - when: user clicks on the "Hand Tools" Checkbox category filter
+    - then: only products belonging to the "Hand Tools" category are displayed in the product grid
+
+    - title: Filter products by category " Power Tools"
+    - given: User is on Homepage (Products Grid)
+    - when: user clicks on the "Power Tools" Checkbox category filter  
+    - then: only products belonging to the "Power Tools" category are displayed in the product grid
+
+    - title: Filter products by category "Other"
+    - given: User is on Homepage (Products Grid)
+    - when: user clicks on the "Other" Checkbox category filter
+    - then: only products belonging to the "Other" category are displayed in the product grid
+    
+    - title: Filter products by  "ForgeFlex Tools" brand category
+    - given: User is on Homepage (Products Grid)
+    - when: user clicks on the "ForgeFlex Tools" Checkbox category filter
+    - then: only products belonging to the "ForgeFlex Tools" category are displayed in the product grid
+
+    - title: Filter products by  "MightyCraft Hardware" brand category
+    - given: User is on Homepage (Products Grid)
+    - when: user clicks on the "MightyCraft Hardware" Checkbox category filter
+    - then: only products belonging to the "MightyCraft Hardware" category are displayed in the product grid
+    
+    - title: Filter products by  "Bridie_Franecki" brand category
+    - given: User is on Homepage (Products Grid)
+    - when: user clicks on the "Bridie_Franecki" Checkbox category filter
+    - then: only products belonging to the "Bridie_Franecki" category are displayed in the product grid
+    
+    - title: Filter products by  "Moriah_Gerlach" brand category
+    - given: User is on Homepage (Products Grid)
+    - when: user clicks on the "Moriah_Gerlach" Checkbox category filter
+    - then: only products belonging to the "Moriah_Gerlach" category are displayed in the product grid
+    
+    - title: Filter products by  "Show only eco-friendly products" filter checkbox category
+    - given: User is on Homepage (Products Grid)
+    - when: user clicks on the "Show only eco-friendly products" Checkbox category filter
+    - then: only products belonging to the "Show only eco-friendly products" category are displayed in the product grid
+    
