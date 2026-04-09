@@ -5,7 +5,7 @@ We need to test <code>Price Range</code> Feature by the following technique(s)
 Equivalence Partitioning
 
 and here is the Targeted Feature :
-<img src="../../misc/images/price-range-testcases/TargetedFeature.png" alt="Product-Price-range-Feature">
+<img src="../../../misc/images/price-range-testcases/TargetedFeature.png" alt="Product-Price-range-Feature">
 
 <hr>
 <div>
