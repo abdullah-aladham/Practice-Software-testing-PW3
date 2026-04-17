@@ -1,0 +1,38 @@
+---
+
+Feature: Product Search with All Filters
+
+Scenarios:
+
+    - title: trying searching for products with all filters applied and valid keyword
+    - given: User is on Homepage (Products Grid)
+    - when: user selects sort by "Name (A-Z)" option from Sort dropdown menu
+    - and: user sets minimum price filter to 0
+    - and: user sets maximum price filter to 100
+    - and : searches for products with valid keyword and clicks on the search icon for example "pliers"
+    - and: user clicks on the "Hand Tools" Checkbox category filter
+    - then: products related to the keyword "pliers" and belonging to the "Hand Tools" category are displayed in the search results and sorted alphabetically by name in ascending order (A-Z) and within the price range of 0 to 100
+
+
+    - title:  invalid trying searching for products with all filters applied and invalid keyword
+    - given: User is on Homepage (Products Grid)
+    - when: user selects sort by "Name (A-Z)" option from Sort dropdown menu
+    - and: user sets minimum price filter to 0
+    - and: user sets maximum price filter to 100
+    - and : searches for products with invalid keyword and clicks on the search icon for example "plaiers"
+    - and: user clicks on the "Hand Tools" Checkbox category filter
+    - then: no products are displayed in the search results and a message appears stating "There are no products found."
+
+
+    - title:  invalid trying searching for products with all filters applied and valid keyword[user tries to search for pliers but he applies power tools category filter]
+    - given: User is on Homepage (Products Grid)
+    - when: user selects sort by "Name (A-Z)" option from Sort dropdown menu
+    - and: user sets minimum price filter to 0
+    - and: user sets maximum price filter to 100
+    - and : searches for products with invalid keyword and clicks on the search icon for example "pliers"
+    - and: user clicks on the "Power Tools" Checkbox category filter
+    - then: no products are displayed in the search results and a message appears stating "There are no products found."
+
+
+
+---

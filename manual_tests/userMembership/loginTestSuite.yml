@@ -11,7 +11,7 @@ scenarios:
         - then: the login is successful 
                 user should be redirected to my account page
 
-    
+
         - title: Failed Login with invalid Email and valid Password
         - given: the user is on the login page
         - and: the user enters invalid Username
@@ -44,5 +44,18 @@ scenarios:
         - then: Error boxes should appear which contain "Email is required" for email input
                 and "Password is required" for password.
 
+        - title: Successful Login with lgoin with google button
+        - given: the User is on the login page
+        - when: the user clicks on login with google button
+        - and: the user selects valid google account
+        - and: the user grants permission to access google account information
+        - then: the login is successful 
+                user should be redirected to my account page
 
+        - title: Failed Login with login with google button and canceling google login process
+        - given: the User is on the login page
+        - when: the user clicks on login with google button
+        - and: the user enters invalid google email or password
+        - then: the login is failed and "Couldn't find your Google Account" error message will be displayed
+                and the user remains on the login page
 ---

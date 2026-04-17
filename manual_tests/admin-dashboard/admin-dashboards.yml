@@ -1,0 +1,16 @@
+--- 
+Feature: Admin Dashboard
+
+  As a QA Engineer who tests the site as an administrator,
+   I want to access the admin dashboard
+  so that I check that Administrator can manage the website effectively.
+
+Scenarios:
+
+   - title: Access to Admin Dashboard
+   - Given: I am on the login page
+   - When: I enter Valid login credentials for the administrator account
+   - then: I should be logged in and redirected to the admin dashboard
+
+
+---
