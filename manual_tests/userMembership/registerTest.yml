@@ -1,0 +1,70 @@
+---
+
+feature: Register
+
+Scenarios:
+  - title: Register New Account Successfully with valid data
+  - given: User is on Login page
+  - and: user clicks on "Register your account"
+  - and: user fills all fields correctly
+  - when: user clicks on Register button
+  - then: user redirected to login page
+
+
+  - title: Fail to Register New Account with invalid Email data format
+  - given: User is on Login page
+  - and: user clicks on "Register your account"
+  - and: user fills data correctly
+  - and: user fills Email field with incorrect data format
+  - when: user clicks on Register button
+  - then: error box contains "Email format is invalid" appears beneath the email input field
+
+  - title: Fail to Register New Account with blank input fields
+  - given: User is on Login page
+  - and: user clicks on "Register your account"
+  - when: user clicks on Register button
+  - then: error boxes contain different authentication messages will apper for each input data format
+
+#Copilot generated test cases for additional scenarios here 
+
+  - title: Fail to Register New Account with password too short
+  - given: User is on Login page
+  - and: user clicks on "Register your account"
+  - and: user fills all fields correctly except password
+  - and: user enters a password shorter than minimum length
+  - when: user clicks on Register button
+  - then: error box contains "Password must be at least 8 characters" appears beneath the password input field
+
+  - title: Fail to Register New Account with password confirmation mismatch
+  - given: User is on Login page
+  - and: user clicks on "Register your account"
+  - and: user fills all fields correctly
+  - and: user enters different password in confirmation field
+  - when: user clicks on Register button
+  - then: error box contains "Passwords do not match" appears beneath the confirmation input field
+
+  - title: Fail to Register New Account with existing email
+  - given: User is on Login page
+  - and: user clicks on "Register your account"
+  - and: user fills all fields correctly
+  - and: user enters an email that is already registered
+  - when: user clicks on Register button
+  - then: error box contains "Email already exists" appears beneath the email input field
+
+  - title: Fail to Register New Account without accepting terms and conditions
+  - given: User is on Login page
+  - and: user clicks on "Register your account"
+  - and: user fills all fields correctly
+  - and: user does not check the terms and conditions checkbox
+  - when: user clicks on Register button
+  - then: error box contains "You must accept the terms and conditions" appears
+
+  - title: Successful Register New Account with optional fields filled
+  - given: User is on Login page
+  - and: user clicks on "Register your account"
+  - and: user fills all required fields correctly
+  - and: user fills optional fields like phone number or address
+  - when: user clicks on Register button
+  - then: user redirected to login page with success message
+
+---

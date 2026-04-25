@@ -1,0 +1,20 @@
+---
+
+Feature: Product Search
+
+Scenarios:
+  
+  - title: Search for products with valid keyword
+  - given: User is on Homepage (Products Grid)
+  - when: user enters a valid keyword in the search bar and clicks on the search icon
+  - then: products related to the keyword are displayed in the search results
+
+  - title: Search for products with invalid keyword
+  - given: User is on Homepage (Products Grid)
+  - when: user enters an invalid keyword in the search bar and clicks on the search icon
+  - then: no products are displayed in the search results and a message appears stating "There are no products found."
+
+  - title: Search for products with blank keyword
+  - given: User is on Homepage (Products Grid)
+  - when: user leaves the search bar blank and clicks on the search icon
+  - then: all products are displayed in the search results #if that is the correct result , here we found a bug

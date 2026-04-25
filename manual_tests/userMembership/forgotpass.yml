@@ -1,0 +1,39 @@
+---
+
+feature: Forgot Password
+Scenarios:
+  - title: Successful Password Reset Request with valid email
+  - given: User is on Login page
+  - and: user clicks on "Forgot your password?"
+  - and: user enters registered email address
+  - when: user clicks on "Set new password" button
+  - then: success message appears confirming that password reset instructions have been sent to the email address
+
+  - title: Failed Password Reset Request with unregistered email
+  - given: User is on Login page
+  - and: user clicks on "Forgot your password?"
+  - and: user enters an email address that is not registered
+  - when: user clicks on "Set new password" button
+  - then: error message appears stating "Email address not found"
+
+  - title: Failed Password Reset Request with invalid email format
+  - given: User is on Login page
+  - and: user clicks on "Forgot your password?"
+  - and: user enters an email address invalid format like "test@test@test"
+  - when: user clicks on "Set new password" button
+  - then: error message appears stating "Invalid email format" #bug found hehe boi 
+
+  - title: Failed Password Reset Request with mispelled email address or domain
+  - given: User is on Login page
+  - and: user clicks on "Forgot your password?"
+  - and: user enters an email address invalid format like "test@tes.com" insead of "test@test.com"
+  - when: user clicks on "Set new password" button
+  - then: error message appears stating "Invalid email format" #bug found hehe boi 
+
+
+  
+  - title: Failed Password Reset Request with blank email field
+  - given: User is on Login page
+  - and: user clicks on "Forgot your password?"
+  - when: user clicks on "Set new password" button without entering an email address
+  - then: error message appears stating "Email is required"

@@ -1,0 +1,65 @@
+---
+Feature : Product Filter - Sort by Price Range
+
+Scenarios:
+
+    - title: Sort products by price range (0-20)
+    - given: User is on Homepage (Products Grid)
+    - when : user sets minimum price filter to 0 
+    - and:   user sets maximum price filter to 20
+    - then: products displayed are within the price range of 0 to 20
+     
+    - title: Sort products by price range (20-40)
+    - given: User is on Homepage (Products Grid)
+    - when : user sets minimum price filter to 20 
+    - and:   user sets maximum price filter to 40
+    - then: products displayed are within the price range of 20 to 40
+
+    - title: Sort products by price range (40-60)
+    - given: User is on Homepage (Products Grid)
+    - when : user sets minimum price filter to 40 
+    - and:   user sets maximum price filter to 60
+    - then: products displayed are within the price range of 40 to 60
+
+    - title: Sort products by price range (60-80)
+    - given: User is on Homepage (Products Grid)
+    - when : user sets minimum price filter to 60 
+    - and:   user sets maximum price filter to 80
+    - then: products displayed are within the price range of 60 to 80
+
+
+    - title: Sort products by price range (80-100)
+    - given: User is on Homepage (Products Grid)
+    - when : user sets minimum price filter to 80 
+    - and:   user sets maximum price filter to 100
+    - then: products displayed are within the price range of 80 to 100
+
+    - title: Sort products by price range (100-120)
+    - given: User is on Homepage (Products Grid)
+    - when : user sets minimum price filter to 100 
+    - and:   user sets maximum price filter to 120
+    - then: products displayed are within the price range of 100 to 120
+
+    - title: Sort products by price range (120-140)
+    - given: User is on Homepage (Products Grid)
+    - when : user sets minimum price filter to 120 
+    - and:   user sets maximum price filter to 140
+    - then: products displayed are within the price range of 120 to 140
+
+    - title: Sort products by price range (140-160)
+    - given: User is on Homepage (Products Grid)
+    - when : user sets minimum price filter to 140 
+    - and:   user sets maximum price filter to 160
+    - then: products displayed are within the price range of 140 to 160
+
+    - title: Sort products by price range (160-180)
+    - given: User is on Homepage (Products Grid)
+    - when : user sets minimum price filter to 160 
+    - and:   user sets maximum price filter to 180
+    - then: products displayed are within the price range of 160 to 180
+
+    - title: Sort products by price range (180-200)
+    - given: User is on Homepage (Products Grid)
+    - when : user sets minimum price filter to 180 
+    - and:   user sets maximum price filter to 200
+    - then: products displayed are within the price range of 180 to 200

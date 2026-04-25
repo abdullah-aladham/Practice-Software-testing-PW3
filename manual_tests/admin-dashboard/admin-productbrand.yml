@@ -1,0 +1,36 @@
+---
+Feature: Product Brand Management in Admin Dashboard
+
+  As a QA Engineer who tests the site as an administrator,
+   I want to manage product brands in the admin dashboard
+  so that
+   I can ensure that the product brand management functionality works correctly.
+
+Scenarios:
+    - title: Add a New Product Brand
+    - Given: I am logged in as an administrator and on the product brand management page
+    - When: I click on "Add New Brand", fill in the brand details, and save
+    - Then: The new product brand should be added to the list and visible in the admin dashboard
+
+    - title: Add a Product Brand with blank fields
+    - Given: I am logged in as an administrator and on the product brand management page
+    - When: I click on "Add New Brand", leave the required fields blank, 
+    - and: attempt to save
+    - Then: I should see validation error messages indicating that the required fields cannot be blank, and the brand should not be added to the list #found a bug hehe boi
+    - title: Edit an Existing Product Brand
+    - Given: I am logged in as an administrator and on the product brand management page with existing brands
+    - When: I select a brand to edit, update the brand details, and save
+    - Then: The changes should be saved and reflected in the product brand list #found a bug hehe boi
+  
+    - title: Delete a Product Brand
+    - Given: I am logged in as an administrator and on the product brand management page with existing brands
+    - When: I select a brand to delete and confirm the deletion
+    - Then: The selected product brand should be removed from the list and no longer visible in the admin dashboard #found a bug 
+
+    - title: Search for a Product Brand
+    - Given: I am logged in as an administrator and on the product brand management page with multiple brands
+    - When: I enter a brand name in the search bar and execute the search 
+    - Then: The search results should display only the brands that match the entered name
+
+    
+---

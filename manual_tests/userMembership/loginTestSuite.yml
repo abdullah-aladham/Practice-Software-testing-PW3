@@ -1,0 +1,61 @@
+---
+
+feature: Login
+
+scenarios:
+        - title: Successful Login with Email and password
+        - given: the User is on the login page
+        - and: the user enters valid Email
+        - and: the user enters valid password
+        - when: the user clicks on login button
+        - then: the login is successful 
+                user should be redirected to my account page
+
+
+        - title: Failed Login with invalid Email and valid Password
+        - given: the user is on the login page
+        - and: the user enters invalid Username
+        - and: the user enters valid password
+        - when: the user clicks on login button
+        - then: an Error box should appear which contains "Invalid email or password"
+
+
+        - title: Failed Login with valid Email and invalid Password
+        - given: the user is on the login page
+        - and: the user enters valid Username
+        - and: the user enters invalid password
+        - when: the user clicks on login button
+        - then: an Error box should appear which contains "Invalid email or password"
+
+
+
+        - title: Failed Login with invalid Email and invalid Password
+        - given: the user is on the login page
+        - and: the user enters invalid Username
+        - and: the user enters invalid password
+        - when: the user clicks on login button
+        - then: an Error box should appear which contains "Invalid email or password"
+
+        - title: Failed Login with blank fields
+        - given: the user is on the login page
+        - and: the user enters invalid Username
+        - and: the user enters invalid password
+        - when: the user clicks on login button
+        - then: Error boxes should appear which contain "Email is required" for email input
+                and "Password is required" for password.
+
+        - title: Successful Login with lgoin with google button
+        - given: the User is on the login page
+        - when: the user clicks on login with google button
+        - and: the user selects valid google account
+        - and: the user grants permission to access google account information
+        - then: the login is successful 
+                user should be redirected to my account page
+
+        - title: Failed Login with login with google button and canceling google login process
+        - given: the User is on the login page
+        - when: the user clicks on login with google button
+        - and: the user enters invalid google email or password
+        - then: the login is failed and "Couldn't find your Google Account" error message will be displayed
+                and the user remains on the login page
+---

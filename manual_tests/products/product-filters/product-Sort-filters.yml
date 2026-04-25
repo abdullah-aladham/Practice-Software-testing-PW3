@@ -1,0 +1,35 @@
+---
+Feature: Product Filters
+
+Scenarios:
+
+    - title: Sort Products by Name(A-Z)
+    - given: User is on Homepage (Products Grid)
+    - when : user clicks on Sort dropdown menu
+    - and : user selects "Name (A-Z)" option
+    - then: products are sorted alphabetically by name in ascending order (A-Z)
+
+    - title: Sort Products by Name(Z-A)
+    - given: User is on Homepage (Products Grid)
+    - when : user clicks on Sort dropdown menu
+    - and : user selects "Name (Z-A)" option
+    - then: products are sorted alphabetically by name in descending order (Z-A)
+    
+    - title: Sort Products by Price (High - Low)
+    - given: User is on Homepage (Products Grid)
+    - when : user clicks on Sort dropdown menu
+    - and : user selects "Price (High - Low)" option
+    - then: products are sorted by price in descending order (High - Low)
+     
+    - title: Sort Products by Co2 (A -E)
+    - given: User is on Homepage (Products Grid)
+    - when : user clicks on Sort dropdown menu
+    - and : user selects "Co2 (A - E)" option
+    - then: products are sorted by Co2 in ascending order (A - E)
+     
+    - title: Sort Products by Co2 (E - A)
+    - given: User is on Homepage (Products Grid)
+    - when : user clicks on Sort dropdown menu
+    - and : user selects "Co2 (E - A)" option
+    - then: products are sorted by Co2 in descending order (E - A)
+---
